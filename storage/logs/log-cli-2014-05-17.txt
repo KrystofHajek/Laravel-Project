@@ -1,0 +1,22 @@
+[2014-05-17 10:20:05] production.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'movies_series'' in D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:47
+Stack trace:
+#0 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(47): PDO->__construct('mysql:host=loca...', 'movies_series', '', Array)
+#1 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Database\Connectors\MySqlConnector.php(20): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#2 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(59): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(47): Illuminate\Database\Connectors\ConnectionFactory->createSingleConnection(Array)
+#4 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Database\DatabaseManager.php(127): Illuminate\Database\Connectors\ConnectionFactory->make(Array, 'mysql')
+#5 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Database\DatabaseManager.php(63): Illuminate\Database\DatabaseManager->makeConnection('mysql')
+#6 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Database\DatabaseManager.php(243): Illuminate\Database\DatabaseManager->connection()
+#7 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(205): Illuminate\Database\DatabaseManager->__call('disableQueryLog', Array)
+#8 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(205): Illuminate\Database\DatabaseManager->disableQueryLog()
+#9 D:\Working\xampp\htdocs\Movie\app\start\global.php(104): Illuminate\Support\Facades\Facade::__callStatic('disableQueryLog', Array)
+#10 D:\Working\xampp\htdocs\Movie\app\start\global.php(104): Illuminate\Support\Facades\DB::disableQueryLog()
+#11 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Foundation\start.php(211): require('D:\Working\xamp...')
+#12 [internal function]: {closure}(Object(Illuminate\Foundation\Application))
+#13 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(731): call_user_func(Object(Closure), Object(Illuminate\Foundation\Application))
+#14 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(515): Illuminate\Foundation\Application->fireAppCallbacks(Array)
+#15 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(498): Illuminate\Foundation\Application->bootApplication()
+#16 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Console\Application.php(44): Illuminate\Foundation\Application->boot()
+#17 D:\Working\xampp\htdocs\Movie\vendor\laravel\framework\src\Illuminate\Console\Application.php(33): Illuminate\Console\Application::make(Object(Illuminate\Foundation\Application))
+#18 D:\Working\xampp\htdocs\Movie\artisan(46): Illuminate\Console\Application::start(Object(Illuminate\Foundation\Application))
+#19 {main} [] []
